@@ -1,0 +1,1154 @@
+.App {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.Sidebar {
+  width: 200px;
+  background-color: white;
+  border-right: 1px solid #c0c5c2;
+  position: absolute;
+  transition: left 0.4s;
+  padding-left: 10px;
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: gray;
+}
+
+.SidebarList {
+  height: auto;
+  padding: 0;
+  width: 100%;
+}
+
+.SidebarList .row {
+  width: 100%;
+  height: 60px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  list-style-type: none;
+  margin: 0%;
+  display: flex;
+  flex-direction: row;
+  color: #616669;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.SidebarList .row:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+.SidebarList #active {
+  background-color: #a0a3a5;
+  color: white;
+}
+
+.row #title {
+  flex: 70%;
+}
+
+.toggle {
+  position: relative;
+  left: 40px;
+  top: 30px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  padding: 0px;
+  padding-top: 1px;
+  border-width: 1px;
+}
+
+/*Pages*/
+.dashboard,
+.statistics,
+.lastMeetingsDiv,
+.achievements,
+.tutorial,
+.login,
+.signup,
+.homepage,
+.help,
+.logout,
+.invite {
+  background-color: #fdfcf7;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-left: 20px;
+  display: grid;
+  column-gap: 15px;
+}
+
+/*Dashboard*/
+.dashboard {
+  grid-template-rows: 100px 240px 250px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "header header header";
+  padding-left: 20px;
+  float: right;
+}
+
+.person {
+  grid-area: header;
+}
+
+.one,
+.two,
+.three,
+.four,
+.five,
+.six {
+  height: 180px;
+  background-color: #f2f3f1;
+  text-align: left;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.two,
+.three,
+.four,
+.five,
+.six {
+  height: 200px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.one {
+  grid-row-start: 2;
+}
+
+.two {
+  grid-row-start: 2;
+}
+
+.three {
+  grid-row-start: 2;
+}
+
+.four {
+  grid-row-start: 3;
+}
+
+.startSession {
+  background-color: #18a0f5;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  border: 1px solid black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 160px;
+  height: 35px;
+  text-align: center;
+  padding-top: 15px;
+  cursor: pointer;
+  margin: 0px;
+  margin-top: 50px;
+  margin-left: 220px;
+}
+
+.upcomingHeader {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  float: left;
+  margin-left: 70px;
+}
+
+#lastMeeting {
+  font-size: 12px;
+  padding-left: 20px;
+}
+
+.upcomingLabels {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 210px 200px 180px 140px 200px;
+  grid-template-rows: 30px;
+  float: left;
+  margin-top: 20px;
+}
+
+.typeLabel {
+  grid-column-start: 1;
+}
+
+.dayLabel {
+  grid-column-start: 2;
+}
+
+.timeLabel {
+  grid-column-start: 3;
+}
+
+.durationLabel {
+  grid-column-start: 4;
+}
+
+.withLabel {
+  grid-column-start: 5;
+}
+
+.upcomingOne,
+.upcomingTwo {
+  background-color: #f2f3f1;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 260px 200px 180px 140px 100px 170px 50px 100px;
+  grid-template-rows: 100px;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.infoCol {
+  justify-content: center;
+  grid-column-start: 1;
+  margin-left: 50px;
+}
+
+.dayCol {
+  justify-content: center;
+  grid-column-start: 2;
+}
+
+.timeCol {
+  justify-content: center;
+  grid-column-start: 3;
+}
+
+.durationCol {
+  justify-content: center;
+  grid-column-start: 4;
+}
+
+.withCol {
+  justify-content: center;
+  grid-column-start: 5;
+}
+
+.iconBtn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.joinBtn {
+  background-color: gray;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border-radius: 10px;
+  padding: 10px;
+  width: 150px;
+  grid-column-start: 6;
+  cursor: pointer;
+}
+
+.addBtn {
+  background-color: #f0f6fb;
+  color: black;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border-radius: 10px;
+  height: 40px;
+  width: 1200px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-right: 42px;
+  float: right;
+}
+
+.switchBtn {
+  width: 40px;
+  border-color: gray;
+  border-width: 2px;
+  border-radius: 10px;
+  cursor: pointer;
+  grid-column-start: 7;
+}
+
+.cancelBtn {
+  width: 40px;
+  border-color: red;
+  color: red;
+  border-width: 2px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 10px;
+  grid-column-start: 8;
+}
+
+.achievements {
+  grid-template-rows: 60px;
+  grid-template-columns: 300px 450px 170px 100px 40px 40px;
+  float: left;
+  margin-left: 40px;
+}
+
+.premiumBtn {
+  background-color: dodgerblue;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border-radius: 10px;
+  padding: 10px;
+  width: 170px;
+  height: 40px;
+  margin-top: 10px;
+  float: right;
+  grid-column-start: 3;
+}
+
+.creditsBtn {
+  background-color: gray;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border-radius: 20px;
+  padding: 10px;
+  width: 100px;
+  height: 40px;
+  grid-column-start: 4;
+  margin-top: 10px;
+}
+
+.bellBtn {
+  background-color: #fdfcf7;
+  color: gray;
+  width: 40px;
+  height: 40px;
+  grid-column-start: 5;
+  margin-top: 10px;
+  border-radius: 5px;
+  border-width: 2px;
+}
+
+.profileBtn {
+  background-color: #fdfcf7;
+  color: gray;
+  width: 40px;
+  height: 40px;
+  grid-column-start: 6;
+  margin-top: 10px;
+  border-radius: 20px;
+}
+
+.achievementsBottom {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: grid;
+  grid-template-rows: 30px;
+  grid-template-columns: 90px 940px 150px;
+  float: left;
+  margin-top: 8px;
+  margin-left: 50px;
+}
+
+.milestonesTab {
+  grid-row-start: 1;
+  grid-column-start: 1;
+  color: gray;
+  font-size: 15px;
+}
+
+.certificatesTab {
+  grid-row-start: 1;
+  grid-column-start: 2;
+  color: gray;
+  font-size: 15px;
+}
+
+.selectLanguage {
+  grid-column-start: 3;
+  grid-row-start: 1;
+}
+
+.selectLanguage select {
+  padding: 10px;
+  width: 160px;
+  height: 40px;
+  border-radius: 8px;
+  border-color: gray;
+  color: gray;
+}
+
+.achievementsGrid {
+  background-color: #fdfcf7;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  border-radius: 10px;
+  float: right;
+  margin-top: 20px;
+  margin-right: 10px;
+  display: grid;
+  grid-template-rows: 100px 100px 100px 100px 100px;
+  grid-template-columns: 250px 200px 200px 200px 200px 200px;
+  width: 1500px;
+  column-gap: 15px;
+  row-gap: 15px;
+}
+
+.aOne,
+.aTwo,
+.aThree,
+.aFour {
+  grid-column-start: 3;
+  grid-row-start: 1;
+  background-color: #e3e4e6;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.aTwo {
+  grid-column-start: 4;
+}
+
+.aThree {
+  grid-column-start: 5;
+}
+
+.aFour {
+  grid-column-start: 6;
+}
+
+.aFive,
+.aSix,
+.aSeven,
+.aEight {
+  grid-column-start: 3;
+  grid-row-start: 2;
+  background-color: #e3e4e6;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.aSix {
+  grid-column-start: 4;
+}
+
+.aSeven {
+  grid-column-start: 5;
+}
+
+.aEight {
+  grid-column-start: 6;
+}
+
+.aNine,
+.aTen,
+.aEleven,
+.aTwelve {
+  grid-column-start: 3;
+  grid-row-start: 3;
+  background-color: #e3e4e6;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.aTen {
+  grid-column-start: 4;
+}
+
+.aEleven {
+  grid-column-start: 5;
+}
+
+.aTwelve {
+  grid-column-start: 6;
+}
+
+.aThirteen,
+.aFourteen,
+.aFifteen,
+.aSixteen {
+  grid-column-start: 3;
+  grid-row-start: 4;
+  background-color: #e3e4e6;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.aFourteen {
+  grid-column-start: 4;
+}
+
+.aFifteen {
+  grid-column-start: 5;
+}
+
+.aSixteen {
+  grid-column-start: 6;
+}
+
+.aSeventeen,
+.aEighteen,
+.aNineteen,
+.aTwenty {
+  grid-column-start: 3;
+  grid-row-start: 5;
+  background-color: #e3e4e6;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.aEighteen {
+  grid-column-start: 4;
+}
+
+.aNineteen {
+  grid-column-start: 5;
+}
+
+.aTwenty {
+  grid-column-start: 6;
+}
+
+.item-achievements {
+  margin: 1em;
+  padding: 0.5em;
+  width: 110px;
+  min-width: 0;
+  background-color: #1b5385;
+  color: white;
+  font-family: monospace;
+  font-size: 13px;
+}
+
+/*Invite section*/
+.section {
+  background-color: #c9cdd1;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.inviteBtn {
+  background-color: #18a0f5;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 150px;
+  height: 40px;
+}
+
+/*.statistics{
+  background-color:black;
+  width:100%;
+  height:80vh;
+  float:right;
+}
+.statistics::before{
+  content:'';
+  background-color:gray;
+  height:100%;
+  width:100%;
+  position:absolute;
+  z-index:-1;
+}
+*/
+
+/*Set New Meeting page*/
+.newmeeting {
+  background-color: #fdfcf7;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  float: right;
+  margin-right: 10px;
+  width: 1500px;
+}
+
+.meetingHeader {
+  padding-left: 200px;
+  text-align: center;
+  grid-row-start: 1;
+}
+
+.fieldOne {
+  padding-left: 650px;
+  grid-row-start: 2;
+  width: 400px;
+  color: gray;
+  text-align: center;
+}
+
+.matchedBtn {
+  background-color: gray;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 18px;
+  margin-right: 20px;
+  width: 150px;
+}
+
+.practiceBtn {
+  background-color: #f2f3f1;
+  color: black;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border-radius: 10px;
+  padding: 10px;
+  width: 170px;
+  margin-bottom: 20px;
+}
+
+.bottomWrapper {
+  padding-left: 720px;
+  margin: 8px;
+}
+
+.grayButton {
+  width: 120px;
+  padding: 7px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.setButton {
+  background-color: DodgerBlue;
+  color: white;
+  width: 150px;
+  padding: 7px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.columnSection {
+  background-color: #f2f3f1;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border-radius: 10px;
+  height: 300px;
+  width: 400px;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-template-rows: 100px 100px 100px;
+  justify-content: center;
+  align-items: center;
+  padding-left: 15px;
+}
+
+.dateWrapper {
+  grid-column-start: 1;
+}
+
+.dateWrapper input {
+  padding: 10px;
+  border-radius: 8px;
+  border-color: gray;
+  border: solid;
+  color: gray;
+}
+
+.timeWrapper {
+  grid-column-start: 2;
+}
+
+.timeWrapper label {
+  color: black;
+  margin-left: 5px;
+}
+
+.timeWrapper input {
+  padding: 10px;
+  border-radius: 8px;
+  border-color: gray;
+  border: solid;
+  color: gray;
+  width: 130px;
+}
+
+.languageWrapper {
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+
+.languageWrapper label {
+  color: black;
+  margin-left: 5px;
+}
+
+.languageWrapper select {
+  padding: 10px;
+  width: 160px;
+  height: 40px;
+  border-radius: 8px;
+  border-color: gray;
+  color: gray;
+}
+
+.typeWrapper {
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+
+.typeWrapper label {
+  color: black;
+  margin-left: 5px;
+}
+
+.typeWrapper select {
+  padding: 10px;
+  width: 160px;
+  height: 40px;
+  border-radius: 8px;
+  border-color: gray;
+  color: gray;
+}
+
+.peerWrapper {
+  grid-row-start: 3;
+  grid-column-start: 1;
+}
+
+.peerWrapper label {
+  color: black;
+  margin-left: 5px;
+}
+
+.peerWrapper select {
+  padding: 10px;
+  width: 360px;
+  height: 40px;
+  border-radius: 8px;
+  border-color: gray;
+  color: gray;
+}
+
+.dateWrapper label,
+input,
+form {
+  display: block;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  text-align: left;
+  color: black;
+  margin: 5px;
+}
+
+.checkboxWrapper {
+  margin-left: 80px;
+  margin-bottom: 50px;
+  color: black;
+}
+
+.checkboxWrapper input {
+  float: left;
+}
+
+/*Statistics*/
+.statistics {
+  grid-template-rows: 80px 200px;
+  grid-template-columns: 450px 700px;
+  float: left;
+}
+
+.statisticsHeader {
+  grid-row-start: 1;
+  margin-left: 20px;
+}
+
+.leftBox,
+.rightBox {
+  background-color: #f2f3f1;
+  border-radius: 10px;
+  height: 160px;
+  text-align: left;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.leftBox {
+  grid-row-start: 2;
+  margin-left: 20px;
+}
+
+.rightBox {
+  grid-row-start: 2;
+  margin-right: 20px;
+}
+
+.lastMeetingsHeader {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  height: 100px;
+  margin-left: 20px;
+  float: left;
+}
+
+.lastMeetingsLabels {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border-radius: 10px;
+  margin-left: 70px;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 200px 200px 150px 150px 150px 200px;
+  float: left;
+}
+
+.lastMeetingsOne,
+.lastMeetingsTwo,
+.lastMeetingsThree,
+.lastMeetingsFour,
+.lastMeetingsFive {
+  background-color: #f2f3f1;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border-radius: 10px;
+  float: left;
+  display: grid;
+  grid-template-rows: 100px;
+  grid-template-columns: 50px 200px 200px 150px 150px 150px 200px 100px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
+.infoStatCol {
+  grid-column-start: 2;
+}
+
+.dayStatCol {
+  grid-column-start: 3;
+}
+
+.timeStatCol {
+  grid-column-start: 4;
+}
+
+.durationStatCol {
+  grid-column-start: 5;
+}
+
+.withStatCol {
+  grid-column-start: 6;
+}
+
+.joinStatBtn {
+  background-color: gray;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border-radius: 10px;
+  padding: 10px;
+  width: 150px;
+  cursor: pointer;
+  grid-column-start: 7;
+}
+
+.feedbackLabel {
+  grid-column-start: 6;
+}
+
+.showmoreCol {
+  grid-column-start: 8;
+  justify-content: center;
+}
+
+/*Tutorial page*/
+
+.tutorial {
+  background-color: #f2f3f1;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border-radius: 10px;
+  width: 1500px;
+  height: 200px;
+  text-align: center;
+  padding: 10px;
+  float: right;
+}
+
+.videoHere {
+  padding-left: 300px;
+  width: 200px;
+  height: 200px;
+}
+
+.tutorialGrid {
+  background-color: #fdfcf7;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border-radius: 10px;
+  float: right;
+  margin-top: 20px;
+  margin-left: 40px;
+  margin-right: 10px;
+  display: grid;
+  column-gap: 15px;
+}
+
+.tutorialHeading {
+  height: 60px;
+}
+
+.nextBtn {
+  background-color: dodgerblue;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border-radius: 8px;
+  padding: 10px;
+  width: 100px;
+  margin-bottom: 20px;
+  margin-left: 700px;
+}
+
+.skipBtn {
+  background-color: white;
+  color: dodgerblue;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 10px;
+  width: 100px;
+  margin-left: 700px;
+}
+
+/*Log in*/
+
+.login {
+  float: left;
+}
+
+.loginHeader {
+  padding-left: 400px;
+  padding-right: 400px;
+  text-align: center;
+}
+
+.loginHeader h1 {
+  width: 400px;
+  color: black;
+  text-align: left;
+}
+
+.loginHeader h2 {
+  width: 400px;
+  color: black;
+  font-size: 13px;
+  font-weight: normal;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.login #googleBtn {
+  color: black;
+  background-color: white;
+  padding: 4px;
+  border-radius: 8px;
+  border-color: gray;
+  border: light;
+  font-weight: normal;
+  cursor: pointer;
+  width: 300px;
+  margin-bottom: 10px;
+}
+
+.login form {
+  color: gray;
+  padding: 10px;
+  border-radius: 8px;
+  border-color: gray;
+  border: solid;
+  width: 350px;
+  margin-top: 20px;
+}
+
+.login label {
+  color: black;
+}
+
+.login input {
+  width: 320px;
+  border-radius: 5px;
+}
+
+.login #signinBtn {
+  color: white;
+  background-color: dodgerblue;
+  padding: 10px;
+  border-radius: 8px;
+  border-color: gray;
+  border: solid;
+  font-weight: normal;
+  cursor: pointer;
+  width: 300px;
+  margin-left: 20px;
+  text-align: center;
+}
+
+.loginHeader h3 {
+  width: 400px;
+  color: black;
+  font-size: 13px;
+  font-weight: normal;
+  margin-left: 70px;
+}
+
+.signup {
+  float: left;
+  padding-left: 300px;
+  padding-right: 400px;
+}
+
+.signupHeader {
+  margin-top: 50px;
+  margin-left: 100px;
+  text-align: center;
+}
+
+.signupHeader h1 {
+  width: 400px;
+  color: black;
+  text-align: left;
+}
+
+.signupHeader h2 {
+  width: 400px;
+  color: black;
+  font-size: 13px;
+  font-weight: normal;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.signup #googleBtn {
+  color: black;
+  background-color: white;
+  padding: 4px;
+  border-radius: 8px;
+  border-color: gray;
+  border: light;
+  font-weight: normal;
+  cursor: pointer;
+  width: 300px;
+  margin-bottom: 10px;
+}
+
+.signup form {
+  color: gray;
+  padding: 10px;
+  border-radius: 8px;
+  border: solid;
+  width: 300px;
+  border-color: gray;
+}
+
+.signup label {
+  color: black;
+}
+
+.signup input {
+  width: 320px;
+  border-radius: 5px;
+}
+
+.homepage {
+  float: left;
+  padding: 200px;
+  padding-left: 400px;
+  padding-right: 400px;
+  width: 500px;
+}
+
+.homepage select {
+  color: gray;
+  padding: 10px;
+  border-radius: 8px;
+  border: solid;
+  width: 300px;
+  border-color: gray;
+}
+
+.homepage #lname {
+  color: gray;
+  padding: 10px;
+  border-radius: 8px;
+  border: solid;
+  width: 300px;
+  border-color: gray;
+}
+
+.homepage #submitBtn {
+  color: gray;
+  padding: 10px;
+  border-radius: 8px;
+  border: solid;
+  border-color: gray;
+  margin-left: 100px;
+}
+
+/*Sign in*/
+.signInBtn {
+  background-color: #18a0f5;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  border: 1px solid black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 160px;
+  height: 35px;
+  text-align: center;
+  padding-top: 15px;
+  cursor: pointer;
+  margin: 0px;
+  margin-top: 50px;
+  margin-left: 100px;
+}
+
+#icon {
+  padding-right: 10px;
+}

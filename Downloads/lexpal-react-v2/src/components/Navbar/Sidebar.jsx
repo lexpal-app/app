@@ -1,0 +1,63 @@
+import React from "react";
+
+import { SidebarData } from "./SidebarData";
+import { useState } from "react";
+import { MdChevronLeft } from "react-icons/md";
+import { MdChevronRight } from "react-icons/md";
+import { ReactComponent as Lexpallogo } from "./lexpallogo.svg";
+import { Link } from "react-router-dom";
+
+function Sidebar({}) {
+  const [visible, setVisible] = useState(false);
+
+  return (
+    <div className="Sidebar" style={{ left: visible ? 0 : -195 }}>
+      <Lexpallogo style={{ height: 60, width: 150 }} />
+      <button className="toggle" onClick={() => setVisible((prev) => !prev)}>
+        {visible ? <MdChevronLeft /> : <MdChevronRight />}
+      </button>
+      <ul className={`menu-nav${setVisible ? " show-menu" : ""}`}></ul>
+      <ul className="SidebarList">
+        {SidebarData.map((val, key) => {
+          let inviteSection = null;
+          if (key === 4) {
+            inviteSection = (
+              <div className="section">
+                Invite friends by email and you both will get 1 credit
+                <button
+                  type="button"
+                  className="inviteBtn"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.location.href = "http://google.com";
+                  }}
+                >
+                  Invite a friend
+                </button>
+              </div>
+            );
+          }
+          return (
+            <>
+              <li
+                key={key}
+                className="row"
+                id={window.location.pathname === val.link ? "active" : ""}
+                onClick={() => {
+                  setVisible(false);
+                  window.location.pathname = val.link;
+                }}
+              >
+                <div id="icon">{val.icon}</div>
+                <div id="title">{val.title}</div>
+              </li>
+              {inviteSection}
+            </>
+          );
+        })}
+      </ul>
+    </div>
+  );
+}
+
+export default Sidebar;
