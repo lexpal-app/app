@@ -1,5 +1,7 @@
 import React from "react";
 import { useState } from "react";
+import Popup from "reactjs-popup";
+import "reactjs-popup/dist/index.css";
 
 const NewMeeting = () => {
   const languages = [
@@ -164,9 +166,25 @@ const NewMeeting = () => {
         <button type="cancel" id="cancelBtn" className="grayButton">
           Cancel
         </button>
-        <button type="submit" id="setBtn" className="setButton">
-          Set New Meeting
-        </button>
+        <Popup
+          trigger={
+            <button type="submit" id="setBtn" className="setButton">
+              {" "}
+              Set New Meeting{" "}
+            </button>
+          }
+          modal
+          nested
+        >
+          {(close) => (
+            <div className="modal">
+              <div className="content">Ready to share a new meeting?</div>
+              <div>
+                <button onClick={() => close()}>Yes!</button>
+              </div>
+            </div>
+          )}
+        </Popup>
       </div>
     </div>
   );

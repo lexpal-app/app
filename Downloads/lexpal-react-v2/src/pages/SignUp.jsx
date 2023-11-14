@@ -19,10 +19,19 @@ const SignUp = () => {
             window.location.href = "http://google.com";
           }}
         >
-          Sign in with Google
+          Sign up with Google
         </button>
 
         <form>
+          <label for="name">Name*</label>
+          <br />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+          />
+          <br />
           <label for="username">Email*</label>
           <br />
           <input
@@ -41,8 +50,10 @@ const SignUp = () => {
             placeholder="Enter your password"
           />
           <br />
-          <input type="submit" id="signinBtn" value="Sign in" />
-          <h3>Don't have an account? Sign Up</h3>
+
+          <input type="submit" id="signinBtn" value="Sign up" />
+
+          <h3>Already have an account? Sign In</h3>
         </form>
       </div>
     </div>

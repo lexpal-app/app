@@ -7,6 +7,8 @@ import Sidebar from "./components/Navbar/Sidebar";
 import { useState } from "react";
 import Dashboard from "./pages/Dashboard";
 import NewMeeting from "./pages/NewMeeting";
+import NewSession from "./pages/NewSession";
+import Profile from "./pages/Profile";
 import Statistics from "./pages/Statistics";
 import Achievements from "./pages/Achievements";
 import Tutorial from "./pages/Tutorial";
@@ -16,7 +18,9 @@ import HomePage from "./pages/HomePage";
 import Help from "./pages/Help";
 import LogOut from "./pages/LogOut";
 import styled from "styled-components";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Popup from "reactjs-popup";
+import "reactjs-popup/dist/index.css";
 
 function App() {
   // const [selected, setSelected] = useState("/dashboard");
@@ -56,6 +60,8 @@ function App() {
           <Route path="/signin" element={<LogIn />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/newmeeting" element={<NewMeeting />} />
+          <Route path="/NewSession" element={<NewSession />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/statistics" element={<Statistics />} />
           <Route path="/achievements" element={<Achievements />} />
           <Route path="/tutorial" element={<Tutorial />} />

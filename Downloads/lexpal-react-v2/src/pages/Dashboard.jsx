@@ -4,6 +4,8 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import EventIcon from "@mui/icons-material/Event";
 import SwapHorizIcon from "@mui/icons-material/SwapHoriz";
 import ClearIcon from "@mui/icons-material/Clear";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import NewSession from "./NewSession";
 
 const Dashboard = () => {
   return (
@@ -27,7 +29,9 @@ const Dashboard = () => {
           <h2 style={{ marginTop: 0, paddingLeft: 0 }}>
             into your learning process
           </h2>
-          <div className="startSession">Start a Session</div>
+          <Link to="/NewSession" className="startSession">
+            Start a Session
+          </Link>
         </div>
         <div className="two">Week Stats</div>
         <div className="three">Today's Goal</div>
