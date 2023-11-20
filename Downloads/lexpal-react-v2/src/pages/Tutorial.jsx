@@ -1,7 +1,12 @@
 import React from "react";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import { useNavigate } from "react-router-dom";
 
 const Tutorial = () => {
+  const navigate = useNavigate();
+  const handleNextClick = () => {
+    navigate("/richlearning");
+  };
   return (
     <>
       <div className="tutorial">
@@ -34,7 +39,12 @@ const Tutorial = () => {
             </p>
           </div>
         </div>
-        <button type="next" id="nextBtn" className="nextBtn">
+        <button
+          type="next"
+          id="nextBtn"
+          className="nextBtn"
+          onClick={handleNextClick}
+        >
           Next
         </button>
         <button type="skip" id="skipBtn" className="skipBtn">

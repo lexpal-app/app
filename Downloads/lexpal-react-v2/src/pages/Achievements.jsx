@@ -2,6 +2,7 @@ import React from "react";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import PersonIcon from "@mui/icons-material/Person";
 import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 const Achievements = () => {
   const [myLanguage, setMyLanguage] = useState("English");
@@ -25,9 +26,14 @@ const Achievements = () => {
         <button type="bell" id="bellBtn" className="bellBtn">
           <NotificationsIcon />
         </button>
-        <button type="profile" id="profileBtn" className="profileBtn">
-          <PersonIcon />
-        </button>
+        <Link
+          to="/Profile"
+          type="profile"
+          id="profileBtn"
+          className="profileBtn"
+        >
+          <PersonIcon /> Marta Gross
+        </Link>
       </div>
 
       <div className="achievementsBottom">

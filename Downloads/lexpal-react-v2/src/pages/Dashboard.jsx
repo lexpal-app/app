@@ -69,9 +69,9 @@ const Dashboard = () => {
         </div>
         <div className="durationCol">30 min</div>
         <div className="withCol">Unknown</div>
-        <button type="join" id="joinBtn" className="joinBtn">
+        <Link to="/NewSession" className="joinBtn">
           Join Session
-        </button>
+        </Link>
         <button type="switch" id="switchBtn" className="switchBtn">
           <span id="iconinText">
             <SwapHorizIcon />

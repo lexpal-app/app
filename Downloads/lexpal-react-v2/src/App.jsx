@@ -12,6 +12,10 @@ import Profile from "./pages/Profile";
 import Statistics from "./pages/Statistics";
 import Achievements from "./pages/Achievements";
 import Tutorial from "./pages/Tutorial";
+import RichLearning from "./pages/RichLearning";
+import MeaningfulConversations from "./pages/MeaningfulConversations";
+import LearningMadeFun from "./pages/LearningMadeFun";
+
 import LogIn from "./pages/LogIn";
 import SignUp from "./pages/SignUp";
 import HomePage from "./pages/HomePage";
@@ -21,6 +25,7 @@ import styled from "styled-components";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
+import AnytimeAnywhere from "./pages/AnytimeAnywhere";
 
 function App() {
   // const [selected, setSelected] = useState("/dashboard");
@@ -65,6 +70,13 @@ function App() {
           <Route path="/statistics" element={<Statistics />} />
           <Route path="/achievements" element={<Achievements />} />
           <Route path="/tutorial" element={<Tutorial />} />
+          <Route path="/richlearning" element={<RichLearning />} />
+          <Route
+            path="/meaningfulconversations"
+            element={<MeaningfulConversations />}
+          />
+          <Route path="/learningmadefun" element={<LearningMadeFun />} />
+          <Route path="/anytimeanywhere" element={<AnytimeAnywhere />} />
           <Route path="/help" element={<Help />} />
           <Route path="/logout" element={<LogOut />} />
         </Routes>
